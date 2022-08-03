@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 :root {
     --color-primary: #DA5C5C;
     --primary-hover-color: #a74b4b;
+    --dark-color: #263238;
+    --secondary-color: #9E9E9E;
+    --light-color: #F5F5F5;
 
 }
 
-html, body {
+html,
+body {
     height: 100%;
     font-family: "Ubuntu", sans-serif;
 }

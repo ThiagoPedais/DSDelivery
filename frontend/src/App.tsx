@@ -1,12 +1,13 @@
 import Navbar from "./core/components/Navbar";
 import './app.scss';
+import Home from "./pages/Home";
 
 function App() {
 
   return (
     <div>
       <Navbar />
-      <h1>Hello World!</h1>
+      <Home />
     </div>
   )
 }
