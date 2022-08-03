@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import main from '../../core/assets/images/main.svg';
 import './styles.scss';
 
@@ -14,13 +15,15 @@ export default function Home() {
                             <h3 className="home-subtitle">
                                 Escolha o seu pedido e em poucos minutos <br /> levaremos na sua porta
                             </h3>
-                            <button className="home-btn-order">Fazer pedido</button>
+                            <Link to="/orders">
+                                <button className="home-btn-order">Fazer pedido</button>
+                            </Link>
                         </div>
                         <div className="home-image">
                             <img src={main} alt="img-main" />
                         </div>
                     </div>
-                    
+
 
                 </div>
             </div>

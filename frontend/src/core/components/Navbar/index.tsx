@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="container">
         <nav className="d-flex my-2 my-md-0 mr-md-3">
           <img src={logo} alt="logo" />
-          <a href="#"><h1 className="fs-3 text-white ms-2 textLogo">DS Delivery</h1></a>
+          <Link to="/"><h1 className="fs-3 text-white ms-2 textLogo">DS Delivery</h1></Link>
         </nav>
       </div>
     </div>
