@@ -24,7 +24,7 @@ type Props = {
 }
 
 
-export default function OrderLocation( { onChangeLocation }: Props ) {
+export default function OrderLocation({ onChangeLocation }: Props) {
 
     const [address, setAddress] = useState<Place>({
         position: initialPosition
@@ -32,7 +32,7 @@ export default function OrderLocation( { onChangeLocation }: Props ) {
 
 
 
-    const loadOptions = async (inputValue: string, callback: (places: Place[]) => void) => {
+    const loadOptions = async (inputValue: string, callback: (places: Place[]) => any) => {
         const response = await fetchLocalMapBox(inputValue);
 
         const places = response.data.features.map((item: any) => {
@@ -47,7 +47,7 @@ export default function OrderLocation( { onChangeLocation }: Props ) {
             });
         });
 
-        callback(places);
+        return places;
     };
 
     const handleChangeSelect = (place: Place) => {
@@ -68,7 +68,7 @@ export default function OrderLocation( { onChangeLocation }: Props ) {
                         placeholder="Digite o endereço de entrega"
                         className="filter"
                         loadOptions={loadOptions}
-                        onChange={ value => handleChangeSelect(value as Place)}
+                        onChange={value => handleChangeSelect(value as Place)}
                     />
                 </div>
                 <MapContainer center={address.position} zoom={13} scrollWheelZoom key={address.position.lat}>
