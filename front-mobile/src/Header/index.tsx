@@ -1,13 +1,28 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import logo from '../assets/logo.png';
+import { PropsStack } from '../Models';
 
 export default function Header() {
+
+  const navigation = useNavigation<PropsStack>();
+
+
+  const handleOnPress = () => {
+    navigation.navigate('Home');
+  };
+
   return (
+
     <View style={styles.container}>
       <Image source={logo} />
-      <Text style={styles.text}>DS Delivery</Text>
+      <TouchableOpacity onPress={handleOnPress}>
+        <Text style={styles.text}>DS Delivery</Text>
+      </TouchableOpacity>
     </View>
+
+
   );
 }
 

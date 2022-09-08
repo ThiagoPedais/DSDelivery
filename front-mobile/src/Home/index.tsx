@@ -1,13 +1,19 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import delivery from '../assets/deliveryman.png';
+import { PropsStack } from '../Models';
 
 
 export default function Home() {
 
+    const navigation = useNavigation<PropsStack>();
 
-    const handleOnPress = () => {}
+
+    const handleOnPress = () => {
+        navigation.navigate('Orders');
+    };
 
     return (
         <>
