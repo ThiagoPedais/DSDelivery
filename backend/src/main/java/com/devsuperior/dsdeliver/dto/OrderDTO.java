@@ -18,7 +18,7 @@ public class OrderDTO implements Serializable {
 	private Double longitude;
 	private Instant moment;
 	private Double total;
-	private OrderStatus status;
+	private OrderStatus status;	
 
 	private List<ProductDTO> products = new ArrayList<>();
 
